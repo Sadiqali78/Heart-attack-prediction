@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Attack Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .result-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .high-risk {
+            color: red;
+            background-color: #ffe6e6;
+        }
+        .low-risk {
+            color: green;
+            background-color: #e6ffe6;
+        }
+        .moderate-risk {
+            color: orange;
+            background-color: #fff3e6;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Heart Attack Prediction Result</h2>
+        <p class="result {% if result == 'High Risk' %}high-risk{% elif result == 'Moderate Risk' %}moderate-risk{% else %}low-risk{% endif %}">
+            {{ result }}
+        </p>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
